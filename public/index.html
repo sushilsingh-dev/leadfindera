@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FindEmailsPro Lead Finder - Discover Business Websites & Emails Instantly. Fast, automated, and compliant.">
+    <title>FindEmailsPro – Premium Lead Finder & Email Discovery SaaS</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <header class="app-header">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                </div>
+                <h1>FindEmails<span>Pro</span></h1>
+                <span class="badge badge-primary">Lead Finder</span>
+                <span class="tagline-sub">Discover Business Websites & Emails Instantly</span>
+            </div>
+            
+            <div class="header-actions">
+                <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle Theme">
+                    <!-- Sun Icon (shown in dark mode) -->
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <!-- Moon Icon (shown in light mode) -->
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="system-status">
+                    <span class="status-dot green"></span>
+                    <span class="status-text">Engine Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Body Grid -->
+        <main class="app-main">
+            <!-- Sidebar Panel: Controls & Search History -->
+            <aside class="app-sidebar">
+                <!-- Navigation Tabs -->
+                <div class="sidebar-tabs">
+                    <button class="tab-btn active" data-target="keyword-search-tab">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        Keyword Discover
+                    </button>
+                    <button class="tab-btn" data-target="url-crawler-tab">
+                        <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                        URL Real Crawler
+                    </button>
+                </div>
+
+                <!-- Form Panel -->
+                <div class="card search-settings-card">
+                    <div class="card-header">
+                        <h3>Configuration Panel</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Mode 1: Keyword Form -->
+                        <form id="keywordForm" class="search-form active-form">
+                            <div class="form-group">
+                                <label for="keyword">Keyword / Industry <span class="required">*</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="keyword" placeholder="e.g. Shoes, Plumber, Dentist" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country <span class="required">*</span></label>
+                                <div class="select-wrapper">
+                                    <select id="country" required>
+                                        <option value="United Kingdom">United Kingdom (UK)</option>
+                                        <option value="United States" selected>United States (USA)</option>
+                                        <option value="Canada">Canada (CA)</option>
+                                        <option value="Australia">Australia (AU)</option>
+                                        <option value="Germany">Germany (DE)</option>
+                                        <option value="France">France (FR)</option>
+                                        <option value="India">India (IN)</option>
+                                        <option value="Italy">Italy (IT)</option>
+                                        <option value="Spain">Spain (ES)</option>
+                                        <option value="Netherlands">Netherlands (NL)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City <span class="optional">(Optional)</span></label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="city" placeholder="e.g. London, Austin, Toronto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="maxResults">Maximum Leads</label>
+                                <div class="select-wrapper">
+                                    <select id="maxResults">
+                                        <option value="30">30 Leads (Fastest)</option>
+                                        <option value="50" selected>50 Leads (Recommended)</option>
+                                        <option value="100">100 Leads</option>
+                                        <option value="300">300 Leads</option>
+                                        <option value="500">500 Leads</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block btn-icon" id="btnFindLeads">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                Find Leads
+                            </button>
+                        </form>
+
+                        <!-- Mode 2: URL Form (Hidden initially) -->
+                        <form id="urlForm" class="search-form">
+                            <div class="form-group">
+                                <label for="urls">Target Websites <span class="required">*</span></label>
+                                <p class="form-help">Enter one URL per line or upload a file containing URLs.</p>
+                                <textarea id="urls" rows="6" placeholder="https://example.com&#10;https://specialfootwear.co.uk&#10;londonshoes.co.uk" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="urlFile">Upload CSV / TXT File</label>
+                                <p class="form-help">Optionally select a file containing URLs to automatically populate the list.</p>
+                                <input type="file" id="urlFile" accept=".csv,.txt" style="padding: 6px; font-size: 13px;">
+                            </div>
+                            <button type="submit" class="btn btn-emerald btn-block btn-icon" id="btnStartCrawl">
+                                <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                                Start Real Crawl
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- History Panel -->
+                <div class="card history-card">
+                    <div class="card-header">
+                        <h3>Recent Discoveries</h3>
+                        <button class="text-btn text-danger" id="btnClearHistory">Clear</button>
+                    </div>
+                    <div class="card-body">
+                        <ul class="history-list" id="historyList">
+                            <li class="empty-state">No search history yet.</li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Work Workspace -->
+            <section class="app-workspace">
+                <!-- Top Metrics Row -->
+                <div class="metrics-grid">
+                    <div class="card metric-card">
+                        <div class="metric-icon bg-indigo">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-title">Compliance Standard</span>
+                            <span class="metric-value font-sm">Public Data Only</span>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon bg-blue">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-title">Discovered Sites</span>
+                            <span class="metric-value" id="statSites">0</span>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon bg-emerald">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-title">Emails Extracted</span>
+                            <span class="metric-value" id="statEmails">0</span>
+                        </div>
+                    </div>
+                    <div class="card metric-card">
+                        <div class="metric-icon bg-purple">
+                            <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <div class="metric-info">
+                            <span class="metric-title">Duplicates Cleaned</span>
+                            <span class="metric-value" id="statDuplicates">0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Crawl Progress Dashboard (Shows during crawl) -->
+                <div class="card progress-card" id="progressCard">
+                    <div class="card-header">
+                        <div class="header-main">
+                            <span class="spinner" id="progressSpinner"></span>
+                            <h3 id="progressTitle">Discovery Engine Scanning</h3>
+                        </div>
+                        <span class="badge badge-accent" id="progressPercent">0%</span>
+                    </div>
+                    <div class="card-body">
+                        <!-- Progress Meter -->
+                        <div class="progress-bar-wrapper">
+                            <div class="progress-bar" id="progressBar"></div>
+                        </div>
+
+                        <!-- Active Discovery Variations -->
+                        <div class="variations-wrapper" id="variationsSection">
+                            <span class="section-label">Generated Search Query Variations:</span>
+                            <div class="variations-grid" id="variationsGrid">
+                                <!-- Variations go here -->
+                            </div>
+                        </div>
+
+                        <!-- Console Output Panel -->
+                        <div class="console-wrapper">
+                            <div class="console-header">
+                                <span>CRAWLER CONSOLE LOG</span>
+                                <button class="console-clear-btn" id="btnClearLogs">Clear Log</button>
+                            </div>
+                            <div class="console-body" id="consoleOutput">
+                                <span class="console-placeholder">Waiting for lead search or real URL crawl request to initialize...</span>
+                            </div>
+                        </div>
+
+                        <!-- Search Debug Panel -->
+                        <div class="card debug-card" id="debugCard" style="margin-top: 20px; display: none;">
+                            <div class="card-header" style="background: var(--bg-tertiary); padding: 10px 15px;">
+                                <h3 style="font-size: 13px; margin: 0; display: flex; align-items: center; gap: 6px;">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: var(--warning);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                    Search Debug Panel
+                                </h3>
+                            </div>
+                            <div class="card-body" style="font-family: monospace; font-size: 12px; line-height: 1.6; color: var(--text-secondary); padding: 12px 15px;">
+                                <div style="margin-bottom: 6px;"><b>Generated Queries:</b> <span id="debugQueries" style="color: var(--text-primary);">N/A</span></div>
+                                <div style="margin-bottom: 6px;"><b>Search Provider Used:</b> <span id="debugProvider" style="color: var(--accent-light);">N/A</span></div>
+                                <div style="margin-bottom: 6px;"><b>Websites Found:</b> <span id="debugWebsitesFound" style="color: var(--success); font-weight: bold;">0</span></div>
+                                <div style="margin-bottom: 6px;"><b>Domains Filtered:</b> <span id="debugDomainsFiltered" style="color: var(--warning); font-weight: bold;">0</span></div>
+                                <div><b>Emails Extracted:</b> <span id="debugEmailsExtracted" style="color: var(--info); font-weight: bold;">0</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Results Section -->
+                <div class="card results-card">
+                    <div class="card-header results-header">
+                        <div class="results-header-left">
+                            <h2>Leads Workspace</h2>
+                            <span class="badge" id="resultsCount">0 Results</span>
+                            <span class="badge badge-accent" id="selectionLabel" style="display: none;">0 selected</span>
+                        </div>
+                        
+                        <!-- Search and export actions -->
+                        <div class="results-actions">
+                            <div class="search-box">
+                                <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <input type="text" id="tableFilter" placeholder="Filter current results...">
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-sm" id="btnCopyEmails">Copy Emails</button>
+                                <button class="btn btn-secondary btn-sm" id="btnCopyWebsites">Copy Websites</button>
+                                <button class="btn btn-secondary btn-sm" id="btnCopyAll">Copy All</button>
+                                <button class="btn btn-primary btn-sm btn-icon" id="btnExportCSV">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    Export CSV
+                                </button>
+                                <button class="btn btn-emerald btn-sm btn-icon" id="btnExportExcel">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><line x1="15" y1="3" x2="15" y2="21"></line><line x1="3" y1="9" x2="21" y2="9"></line><line x1="3" y1="15" x2="21" y2="15"></line></svg>
+                                    Export Excel
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Workspace filter and sorting panel -->
+                    <div class="workspace-filter-bar">
+                        <div class="filter-group-toggles">
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="filterHighQuality"> Only High Quality (Score &ge; 70)
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="filterCorporate"> Only Corporate Emails
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="filterExcludeFree"> Exclude Free Emails
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="filterExcludeSocial"> Exclude Socials
+                            </label>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="filterExcludeMarketplace"> Exclude Marketplaces
+                            </label>
+                        </div>
+                        <div class="sort-group-options">
+                            <label for="tableSortBy" style="font-size: 12px; font-weight: 600; color: var(--text-secondary);">SORT BY:</label>
+                            <select id="tableSortBy" class="select-sm" style="width: auto; padding: 6px 12px; font-size: 12px; background: var(--bg-tertiary);">
+                                <option value="score-desc" selected>Lead Score (High &rarr; Low)</option>
+                                <option value="score-asc">Lead Score (Low &rarr; High)</option>
+                                <option value="emails-desc">Email Count (High &rarr; Low)</option>
+                                <option value="website-asc">Website (A &rarr; Z)</option>
+                                <option value="name-asc">Business Name (A &rarr; Z)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-0">
+                        <div class="table-container">
+                            <table id="leadsTable">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 40px; text-align: center;"><input type="checkbox" id="selectAllLeads"></th>
+                                        <th>Business Name</th>
+                                        <th>Category</th>
+                                        <th>Website Title</th>
+                                        <th>Website</th>
+                                        <th>Public Emails (Quality &amp; Source Type)</th>
+                                        <th>Lead Score</th>
+                                        <th>Email Count</th>
+                                        <th>Source Count</th>
+                                        <th>Meta Description</th>
+                                        <th>Crawl Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="leadsTableBody">
+                                    <tr class="empty-row">
+                                        <td colspan="11">
+                                            <div class="table-empty-state">
+                                                <div class="empty-icon">
+                                                    <svg viewBox="0 0 24 24" width="48" height="48" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                                                </div>
+                                                <h4>No leads found yet</h4>
+                                                <p>Configure search filters on the sidebar and click <b>Find Leads</b>, or run a <b>Real Crawl</b> on your custom URL list.</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rejected Results Section -->
+                <div class="card rejected-card" id="rejectedCard" style="margin-top: 25px;">
+                    <div class="card-header results-header" style="background: var(--bg-tertiary); padding: 12px 20px; display: flex; justify-content: space-between; align-items: center;">
+                        <div class="results-header-left" style="display: flex; align-items: center; gap: 8px;">
+                            <h2 style="font-size: 14px; margin: 0; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
+                                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="color: var(--danger);"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                                Rejected Results (Lead Score &lt; 60)
+                            </h2>
+                            <span class="badge" id="rejectedCount" style="background: var(--bg-primary); color: var(--text-muted); font-size: 11px;">0 Results</span>
+                        </div>
+                        <button class="btn btn-secondary btn-sm" id="btnToggleRejected" style="font-size: 11px; padding: 4px 8px; border: 1px solid var(--border-color); background: transparent; cursor: pointer; color: var(--text-secondary);">Show</button>
+                    </div>
+                    <div class="card-body p-0" id="rejectedTableBodyContainer" style="display: none; border-top: 1px solid var(--border-color);">
+                        <div class="table-container" style="max-height: 300px; overflow-y: auto;">
+                            <table id="rejectedTable">
+                                <thead>
+                                    <tr>
+                                        <th>Business Name</th>
+                                        <th>Category</th>
+                                        <th>Website</th>
+                                        <th>Public Emails</th>
+                                        <th>Lead Score</th>
+                                        <th>Crawl Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rejectedTableBody">
+                                    <tr class="empty-row">
+                                        <td colspan="6" style="text-align: center; color: var(--text-muted); padding: 25px; font-size: 13px;">
+                                            No rejected leads.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info footer banner -->
+                <div class="compliance-banner">
+                    <div class="banner-icon">
+                        <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    </div>
+                    <div class="banner-content">
+                        <strong>Compliance & GDPR Safeguards:</strong> Lead Finder Pro only identifies publicly published business email addresses on accessible web pages. It respects <code>robots.txt</code> protocols, does not query private contact directories, and operates strictly with open OSINT datasets.
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Notification system toast -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
